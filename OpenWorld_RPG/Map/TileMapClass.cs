@@ -33,15 +33,15 @@ namespace OpenWorld_RPG.Map
                     {
                         tileArray[i, j] = new Tile(waterTex, new Vector2(tileSize * i, tileSize * j), new Vector2(tileSize, tileSize), Color.White);
                     }
-                    else if (tilesArrayF[i][j] >= 0.35 && tilesArrayF[i][j] < 0.4)
+                    else if (tilesArrayF[i][j] >= 0.35 && tilesArrayF[i][j] < 0.45)
                     {
                         tileArray[i, j] = new Tile(waterTex, new Vector2(tileSize * i, tileSize * j), new Vector2(tileSize, tileSize), Color.SkyBlue);
                     }
-                    else if (tilesArrayF[i][j] >= 0.4 && tilesArrayF[i][j] < 0.45)
+                    else if (tilesArrayF[i][j] >= 0.45 && tilesArrayF[i][j] < 0.55)
                     {
                         tileArray[i, j] = new Tile(sandTex, new Vector2(tileSize * i, tileSize * j), new Vector2(tileSize, tileSize), Color.White);
                     }
-                    else if (tilesArrayF[i][j] >= 0.45 /*&& tilesArrayF[i][j] < 0.8*/)
+                    else if (tilesArrayF[i][j] >= 0.55 /*&& tilesArrayF[i][j] < 0.8*/)
                     {
                         tileArray[i, j] = new Tile(grassTex, new Vector2(tileSize * i, tileSize * j), new Vector2(tileSize, tileSize), Color.White);
                     }

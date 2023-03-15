@@ -44,7 +44,7 @@ namespace OpenWorld_RPG.Map
 
             writer.Close();
         }
-
+        
         public float[,] ReadFile(int tileAmount)
         {
             reader = new StreamReader("..\\PerlinMap.txt");

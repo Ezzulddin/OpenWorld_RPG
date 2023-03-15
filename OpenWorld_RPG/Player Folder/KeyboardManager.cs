@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenWorld_RPG.Mob_Folder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -9,9 +10,9 @@ namespace OpenWorld_RPG.PlayerFolder
 {
     public class KeyboardManager
     {
-        private float speed = 2.5f;
+        private float speed = 3f;
         private float sprintingSpeed = 3.5f;
-        
+        private float mobSpeed = 1.5f;
         public void movement(Player p)
         {
             if (p.goingUp)
@@ -52,7 +53,6 @@ namespace OpenWorld_RPG.PlayerFolder
         {
             playerSprite.spritePosition = new Vector2(playerSprite.spritePosition.X, playerSprite.spritePosition.Y + speed);
         }
-
         public void goSprinting(Player playerSprite)
         {
             if (playerSprite.goingRight)
@@ -71,6 +71,24 @@ namespace OpenWorld_RPG.PlayerFolder
             {
                 playerSprite.spritePosition = new Vector2(playerSprite.spritePosition.X, playerSprite.spritePosition.Y + sprintingSpeed);
             }
+        }
+
+        //MOB MOVEMENT
+        public void GoLeft(Mob playerSprite)
+        {
+            playerSprite.spritePosition = new Vector2(playerSprite.spritePosition.X - mobSpeed, playerSprite.spritePosition.Y);
+        }
+        public void GoRight(Mob playerSprite)
+        {
+            playerSprite.spritePosition = new Vector2(playerSprite.spritePosition.X + mobSpeed, playerSprite.spritePosition.Y);
+        }
+        public void GoUp(Mob playerSprite)
+        {
+            playerSprite.spritePosition = new Vector2(playerSprite.spritePosition.X, playerSprite.spritePosition.Y - mobSpeed);
+        }
+        public void GoDown(Mob playerSprite)
+        {
+            playerSprite.spritePosition = new Vector2(playerSprite.spritePosition.X, playerSprite.spritePosition.Y + mobSpeed);
         }
     }
 }

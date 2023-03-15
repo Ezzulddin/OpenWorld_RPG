@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using OpenWorld_RPG.Json_File;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,5 +24,6 @@ namespace OpenWorld_RPG.PlayerFolder
 
             Transform = Position * offset;
         }
+        
     }
 }
