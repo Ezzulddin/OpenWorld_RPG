@@ -36,14 +36,14 @@ namespace OpenWorld_RPG
             
             spriteBatch.End();
         }
-        public void AnimateSprite(SpriteBatch spriteBatch, Texture2D texture, CameraManager camera, Rectangle[,] aRectnagle, int direct, int currentAnimationIndex, Player p)
-        {
-            spriteBatch.Begin(SpriteSortMode.Deferred,
-      BlendState.AlphaBlend,
-      SamplerState.PointClamp,
-      null, null, null, transformMatrix: camera.Transform);
-            spriteBatch.Draw(texture, new Rectangle((int)p.spritePosition.X, (int)p.spritePosition.Y, (int)p.spriteSize.X, (int)p.spriteSize.Y), aRectnagle[direct, currentAnimationIndex], Color.White);
-            spriteBatch.End();
-        }
+      //  public void AnimateSprite(SpriteBatch spriteBatch, Texture2D texture, CameraManager camera, Rectangle[,] aRectnagle, int direct, int currentAnimationIndex, Player p)
+      //  {
+      //      spriteBatch.Begin(SpriteSortMode.Deferred,
+      //BlendState.AlphaBlend,
+      //SamplerState.PointClamp,
+      //null, null, null, transformMatrix: camera.Transform);
+      //      spriteBatch.Draw(texture, new Rectangle((int)p.spritePosition.X, (int)p.spritePosition.Y, (int)p.spriteSize.X, (int)p.spriteSize.Y), aRectnagle[direct, currentAnimationIndex], Color.White);
+      //      spriteBatch.End();
+      //  }
     }
 }

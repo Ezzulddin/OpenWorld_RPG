@@ -51,6 +51,32 @@ namespace OpenWorld_RPG.Json_File
             string fileContents = File.ReadAllText(PATH);
             return JsonSerializer.Deserialize<JsonFile>(fileContents);
         }
+        public void CurrencyCalculator(JsonFile _Currency,bool mKilled,bool bought,int moneyInt,TextManager tManager,string money, SpriteFont currencyFont)
+        {
+            //_Currency = Load();
+            
+            if (mKilled)
+            {
+                moneyInt += 50;
+                tManager.textContent = moneyInt.ToString();
+                //Save(_Currency);
+            }
+            if(bought)
+            {
+                moneyInt = moneyInt- 50;
+                tManager.textContent = moneyInt.ToString();
+                //Save(_Currency);
+            }
+            tManager = new TextManager(new Vector2(1900, 0), money, currencyFont);
+        }
+        //public void ItemCalculator()
+        //{
+        //    if (Keyboard.GetState().IsKeyDown(Keys.I))
+        //    {
+        //        swordInt = 1;
+        //        items.Inventory(items, swordInt, potionInt);
+        //    }
+        //}
         public void DisplayOnScreen(JsonFile _items, JsonFile _currency,Player p, SpriteBatch spriteBatch,CameraManager cManager ,Sprite sword, Sprite potion, Texture2D emptyTex)
         {
             _items = Load();

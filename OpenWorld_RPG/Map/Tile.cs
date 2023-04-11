@@ -17,6 +17,6 @@ namespace OpenWorld_RPG.Map
             : base(inTexture, inPosition, inSize, color)
         {
         }
-
+        
     }
 }

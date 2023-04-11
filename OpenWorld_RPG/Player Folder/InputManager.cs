@@ -13,7 +13,7 @@ namespace OpenWorld_RPG.PlayerFolder
     {
         KeyboardState state;
 
-        public void CheckKeys(Player pSprite, GraphicsDeviceManager graphics)
+        public void CheckKeys(Player pSprite)
         {
             state = Keyboard.GetState();
 

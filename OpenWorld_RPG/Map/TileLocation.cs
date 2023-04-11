@@ -17,6 +17,5 @@ namespace OpenWorld_RPG.Map
             x = X;
             y = Y;
         }
-        
     }
 }
